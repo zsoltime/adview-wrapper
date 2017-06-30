@@ -1,0 +1,30 @@
+{
+  "name": "adview-wrapper",
+  "version": "0.1.0",
+  "description": "Simple Node.js wrapper for Adview.online's FeedAPI",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zsoltime/adview-wrapper.git"
+  },
+  "keywords": [
+    "job",
+    "rest",
+    "api",
+    "adview"
+  ],
+  "author": "Zsolt Meszaros",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zsoltime/adview-wrapper/issues"
+  },
+  "homepage": "https://github.com/zsoltime/adview-wrapper#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "superagent": "^3.5.2"
+  }
+}
