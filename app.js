@@ -3,6 +3,7 @@
 const express = require('express');
 const request = require('superagent');
 
+const headers = require('./middlewares/headers');
 const { removeEmptyProps } = require('./helpers');
 const { PORT, PUBLISHER, URL } = require('./config');
 
@@ -10,15 +11,7 @@ const app = express();
 
 app.enable('trust proxy');
 app.set('port', PORT);
-
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', ORIGIN);
-  res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept'
-  );
-  return next();
-});
+app.use(headers);
 
 app.get('/', (req, res) => {
   const defaultSettings = {
